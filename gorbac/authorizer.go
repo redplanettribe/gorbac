@@ -17,11 +17,11 @@ type Authorizer interface {
 	Authorize(roles []string, actionResource string) (bool, error)
 }
 type authorizer struct {
-	permissions Permissions
+	permissions *Permissions
 }
 
 // NewAuthorizer creates a new Authorizer with the given Permissions. The Authorizer checks if the roles have the permission to perform the action on the resource. Generate the permissions with NewPermissions.
-func NewAuthorizer(p Permissions) Authorizer {
+func NewAuthorizer(p *Permissions) Authorizer {
 	return authorizer{permissions: p}
 }
 
