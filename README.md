@@ -36,7 +36,18 @@ func main () {
         /* */Read("roles").
         /* */Write("roles").
         /* */Delete("roles")
-        
     authorizator := gorbac.NewAuthorizer(p)
+    
 }
+```
+
+## Versioning
+
+This library follows semantic versioning. For production use, we recommend pinning to a specific version:
+
+```go
+import (
+    gorbac "github.com/redplanettribe/gorbac/<version>"
+)
+```
 
